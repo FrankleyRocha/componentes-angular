@@ -12,6 +12,9 @@ export class BuscaCepService {
 
   }
 
+  /* Mais informações em:
+   * https://viacep.com.br/
+   */
   buscar(cep: String){
 
     return this.http.get(
