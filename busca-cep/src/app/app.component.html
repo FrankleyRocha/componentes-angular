@@ -1,0 +1,25 @@
+<!-- <router-outlet></router-outlet> -->
+
+<form (submit)="buscarCep()">
+
+  <label for="cep">
+    Digite um cep:
+  </label>
+
+  <input
+    (focus)="true"
+    name="cep"
+    id="cep"
+    [(ngModel)]="cep" />
+
+  <button type="submit">Buscar</button>
+
+</form>
+
+<ul>
+  <li *ngFor="let c of listaCep">
+    <p>{{c.logradouro}}</p>
+    <p>{{c.bairro}}</p>
+    <p>{{c.cep}} | {{c.localidade}} - {{c.uf}}</p>
+  </li>
+</ul>
